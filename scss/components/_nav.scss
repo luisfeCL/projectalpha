@@ -1,0 +1,66 @@
+/*=============================================
+=                    nav y rrss               =
+=============================================*/
+
+.nav__label{
+    @include form;
+    cursor: pointer;
+    font-size: $subtitle;
+    padding-left: $space-medium;
+    position: relative;
+    top: 5%;
+    z-index: 2;
+
+}
+
+input[type=radio]{
+    display: none;
+}
+
+input[type=radio]:hover + label{
+    color: $darken-red;
+}
+
+input[type=radio]:checked + label{
+    color: $titlecolor;
+    text-decoration: underline;
+}
+
+.section1:checked ~ .sections{
+       transform: translateX(0);
+}
+.section2:checked ~ .sections{
+    transform: translateX(-33.3333%);
+}
+.section3:checked ~ .sections{
+    transform: translateX(-66.6666%);
+}
+/*=============================================
+=                   RRSS                      =
+=============================================*/
+
+.rrss{
+    z-index: 1;
+    position: absolute;
+    top: 93%;
+    left: 50%;
+    transform: translateX(-50%);
+    &__nav{
+        @include nav;
+        display: flex;
+        text-align: left;
+        padding: 0;    
+    }
+    &__button{
+        &--paddingleft{
+            padding-left: $space-medium;
+        }
+    }
+}
+
+.rrss_icon--path{
+    fill: $icon-color;
+    &:hover{
+        fill: $bgcolor-white;
+    }
+}

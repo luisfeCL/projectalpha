@@ -1,0 +1,90 @@
+/*=============================================
+=            $mixins                          =
+=============================================*/
+
+@mixin remove-border($value: $unit) {
+    margin: $value - 10px;
+}
+
+@mixin max-width($max-width : $pagemaxwidth, $width: 100%)  {
+    margin-left:auto;
+    margin-right:auto;
+    max-width: $max-width;
+    width:$width;
+}
+
+@mixin gridcell($width: 100%, $margin: $space) {
+    flex: 0 0 calc(#{$width} - #{$margin});
+}
+
+@mixin nav{
+  font-family: neue-haas-grotesk-display, sans-serif;
+	font-weight: 500;
+  font-size: $nav;
+  color: $textcolor;
+}
+
+@mixin main-title{
+  font-family: neue-haas-grotesk-display, sans-serif;
+	font-weight: 700;
+  font-size: 36rem;
+  color: $titlecolor;
+  margin: 0;
+}
+
+@mixin subtitle{
+  font-family: neue-haas-grotesk-display, sans-serif;
+	font-weight: 600;
+  font-size: $subtitle;
+  margin: 0;
+  text-align: right;
+  color: $h2color;
+}
+
+@mixin section-title{
+  font-family: neue-haas-grotesk-display, sans-serif;
+	font-weight: 500;
+  font-size: $subtitle;
+  margin: 0;
+  padding-bottom: $space;
+  color: $titlecolor;
+  text-align: center;
+}
+
+@mixin dialog-title{
+  font-family: neue-haas-grotesk-display, sans-serif;
+	font-weight: 500;
+  font-size: $subtitle;
+  margin: 0;
+  padding-bottom: $space;
+  color: $bgcolor-white;
+  text-align: center;
+}
+
+@mixin form{
+  font-family: neue-haas-grotesk-display, sans-serif;
+	font-weight: 500;
+  font-size: $form;
+}
+
+@mixin home-button{
+  font-family: neue-haas-grotesk-display, sans-serif;
+	font-weight: 500;
+  font-size: $form;
+  color: $bgcolor-white;
+}
+
+@mixin button{
+  font-family: neue-haas-grotesk-display, sans-serif;
+	font-weight: 500;
+  font-size: $subtitle;
+  color: $bgcolor-white;
+}
+
+@media (max-width: 1146px) {
+  @mixin paragraph{
+    font-family: neue-haas-grotesk-display, sans-serif;
+	  font-weight: 500;
+    font-size: 1rem;
+  }
+}

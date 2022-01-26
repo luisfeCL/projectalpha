@@ -1,0 +1,49 @@
+/*=============================================
+=       estructura y elementos comunes        =
+=============================================*/
+*{
+    box-sizing: border-box;
+    list-style: none;
+}
+
+html{
+    font-size: 6.25%;
+}
+
+body, html {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: $paragraph;
+    height: 85%;
+    width: 90%;
+    border-radius: $space;
+    border: $border;
+    overflow: hidden;
+    box-shadow: $unit $unit $space-medium $shadow-color;
+    transition:.2s ease-in-out;
+}
+.sections{
+    width: 300%;
+    display: flex;
+    transition: transform 1s ease-in-out;
+    justify-content: center;
+    padding-top: $space-xlarge;
+}
+.section__title{
+    @include section-title;
+}
+.paragraph{
+    font-family: neue-haas-grotesk-display, sans-serif;
+    font-weight: 500;
+    font-size: $paragraph;
+    padding: 4rem;
+    margin: $unit;
+  }
+  

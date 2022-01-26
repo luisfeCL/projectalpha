@@ -1,0 +1,69 @@
+/*=============================================
+=                    colores                  =
+=============================================*/
+
+$bgcolor-red: #F23D3D;
+$bgcolor-white: #F2E8DF;
+$textcolor: #012326;
+$titlecolor: #F23D3D;
+$h2color:#012326;
+$boxcolor: #E0D5C9;
+$border-color:#012326;
+$icon-color: #012326;
+$button-color: #F23D3D;
+$shadow-color: #012326;
+$darken-red: #6e1b1b;
+
+//=================> Colores
+
+$colors: (
+    'text': $textcolor,
+    'title': $titlecolor,
+    'subtitle': $h2color,
+    'box': $boxcolor,
+    'border': $border-color,
+);
+
+@each $name, $value in $colors{
+    .color_#{$name}{
+        color:$value;
+    }
+};
+
+//=================> Backgrounds
+
+$backgrounds: (
+    'background-red': $bgcolor-red,
+    'background-white': $bgcolor-white,
+);
+
+@each $name, $value in $backgrounds{
+    .color_#{$name}{
+        background-color: $value;
+    }
+}
+
+
+//=================> $Espaciados 
+
+$space: 16rem;
+$space-medium: 32rem;
+$space-large: 64rem;
+$space-xlarge: 80rem;
+
+//=================> $Tamaños de fuentes
+
+$paragraph: 18rem;
+$paragraph-small: 16rem;
+$title: 32rem;
+$subtitle: 24rem;
+$nav: 20rem;
+$form: 14rem;
+
+//=================> $otros
+
+$small: 4rem;
+$unit: 8rem;
+$border: 4rem solid $border-color;
+$border-form: 2rem solid $border-color;
+$border-form-checked: 4rem solid $titlecolor;

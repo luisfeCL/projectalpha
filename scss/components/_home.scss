@@ -1,0 +1,65 @@
+/*=============================================
+=                   Inicio                    =
+=============================================*/
+
+.presentation__avatar1{
+    background-image: url('../images/Avatar1.jpg');
+    border-radius: 50%;
+    height: 150rem;
+    width: 150rem;
+    min-height: 150rem;
+    min-width: 150rem;
+    border: 2rem solid $border-color;
+    transition:.2s ease-in-out;
+    &:hover{
+        background-image: url('../images/Avatar2.jpg') ;
+    }
+}
+
+.title{
+    padding-top: $space;
+    padding-bottom: 0;
+}
+
+.presentation__title{
+    padding: 0;
+}
+
+.presentation__name{
+    @include main-title;
+}
+.presentation__profesion{
+    @include subtitle;
+}
+
+.presentation__content{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: $unit;
+
+    &__text{
+        text-align: left;
+        padding-left: $space;
+        max-width: 75%;
+    }
+    &__icon{
+        height: 125rem;
+        width: 125rem;
+        
+    }
+    &:nth-child(even){
+        flex-direction: row-reverse;
+        .info__text{
+            padding-left: 0;
+            padding-right: $space;
+            text-align: right;
+        }
+    }
+}

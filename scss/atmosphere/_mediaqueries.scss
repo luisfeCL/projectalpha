@@ -1,0 +1,99 @@
+/*=============================================
+=               media querys                  =
+=============================================*/
+
+@media(max-width:1144px){
+    main{
+    border: 0;
+    border-radius: 0;
+    height: 100%;
+    width: 100%;
+    overflow: scroll;
+    }
+    .nav__label{
+        display: none;
+    }
+    .sections{
+        position: absolute;
+        transform: translatex(0);
+        padding-top: $space-medium;
+        max-width: 100%;
+        flex-direction:column;
+    }
+    .section1:checked ~ .sections{
+        transform: translateY(0);
+    }
+    .section2:checked ~ .sections{
+     transform: translateY(0);
+    }
+    .section3:checked ~ .sections{
+     transform: translateY(0);
+    }
+    
+    .container{
+        max-width: 100%;
+        height: 200%;
+        padding-top: $space-medium;
+        flex-direction: column;
+    }
+    .article__flex{
+        height: 100%;
+    }
+    .hobbie, .aptitudes{
+        min-width: 100%;
+        max-width: 100%;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .hobbie__item, .aptitudes__item{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .aboutme__icon{
+        margin: 16rem;
+    }
+
+    .aboutme__icon--path:hover{
+        fill: $bgcolor-red;
+    }
+    .reverse{
+        flex-direction: row-reverse;
+    }
+    .aboutme__text{
+        width: 50%;
+        margin: 0;
+        display: none;
+    }
+    .grid__cell--50{
+        @include gridcell(25%)
+    }
+    .grid__cell--form{
+        @include gridcell(20%)
+    }
+    .rrss{
+        width: 90%;
+        background-color: $bgcolor-white;
+        display: flex;
+        justify-content: center;
+        top: 95%;
+        padding-bottom: $space;
+        position: fixed;
+        &__nav{
+            margin: 0;
+        }   
+    }
+    .rrss_icon--path:hover{
+        fill: $bgcolor-red;
+    }
+}
+
+
+@media(max-width:730px){
+    
+    .presentation__name{
+        font-size: $subtitle;
+    }
+    .presentation__profesion{
+        font-size: 20rem;
+    }
+}

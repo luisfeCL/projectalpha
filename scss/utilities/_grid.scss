@@ -1,0 +1,34 @@
+/*=============================================
+=                   $GRID                     =
+=============================================*/
+.grid {
+    display: flex;
+    @include max-width(2048px, 80%);
+  
+    &__cell {
+      padding: $space;
+      @include remove-border(12px);
+  
+      &--100 {
+        @include gridcell(100%);
+      }
+  
+      &--50 {
+        @include gridcell(50%);
+      }
+      &--33 {
+        @include gridcell(33%);
+      }
+      &--20{
+        @include gridcell(20%);
+      }
+      &--10 {
+        @include gridcell(10%);
+      }
+      &--form{
+        @include gridcell(33%)
+      }
+      
+    }
+  }
+  

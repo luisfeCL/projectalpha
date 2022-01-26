@@ -1,0 +1,34 @@
+/*=============================================
+=                  about me                   =
+=============================================*/
+.hobbie, .aptitudes{
+    padding: $unit;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+.hobbie__item, .aptitudes__item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: $space;
+}
+
+.aboutme__button{
+    background-color: transparent;
+    border: 0;
+}
+
+.visible{
+    display: block;
+    transition: 1s ease-in-out;
+}
+.aboutme__icon{
+    width: 75rem;
+    height: 75rem;
+    &--path{
+        fill: $icon-color;
+    }
+}
+
