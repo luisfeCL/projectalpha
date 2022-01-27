@@ -322,7 +322,6 @@ input[type=radio]:checked + label {
   display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
-  padding: 32rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
